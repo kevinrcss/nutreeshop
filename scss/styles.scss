@@ -1,0 +1,17 @@
+// Dimensiones
+$max-width: 1200px;
+$min-width : 320px;
+
+// Paleta de colores
+$palette-primary-color: #1b1b1b; 
+$palette-second-color: #1b1b1b;
+$palette-third-color: #cdcdd4;
+// Color de fuente
+$font-primary-color: #222;
+
+@import "materialize/material-icons"; 
+@import "base/_base";
+@import "layout/layout";
+
+@import "components/_header";
+@import "components/_menu";

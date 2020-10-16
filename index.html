@@ -1,11 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
+    <title>NutreeShop</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--Import Google Icon Font-->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <h1>NutreeShop</h1>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="l-container header-content">
+            <div class="social-networks">
+                <a href="#" class="social-icon icon--facebook">Síguenos en Facebook</a>
+                <a href="#" class="social-icon icon--instagram">Encuéntranos en Facebook</a>
+                <a href="#" class="social-icon icon--whatsapp">Contáctanos en whatsapp</a>
+            </div>
+            <button id="menu-button" class="menu-button">
+                <span id="menu-icon" class="menu-button__icon">menu</span>            
+            </button>
+
+        </div>
+    </header>
+    <nav id="menu-nav" class="menu-nav">
+        <div class="l-container">   
+            <ul id="main-menu" class="main-menu">
+                <li class="main-menu__item">
+                    <a href="#" class="main-menu__link">Hombres</a>
+                    <div>
+                        <ul>
+                            <li>hola</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="main-menu__item">
+                    <a href="#" class="main-menu__link">Mujeres</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="product">
+            <h2 class="product-slogan">
+                <span class="product-slogan__capital-letter">F</span>ortalece tus
+                <span class="product-slogan__capital-letter">M</span>úsculos
+            </h2>
+            <img class="" src="" alt="">
+            <div class="product-information">
+                <ul class="product-tabs">
+                    <li class="product-tab__item"><a href="#summary" class="active">Queen Protein</a></li>
+                    <li class="product-tab__item"><a href="#price">Presentaciones</a></li>
+                    <li class="product-tab__item"><a href="#information">Información</a></li>
+                </ul>
+                <div class="product-container-tabs">
+                    <div class="product-content-tab" id="summary">Queen Protein</div>
+                    <div class="product-content-tab" id="price">Tabla de Presentaciones, Sabores y Precios</div>
+                    <div class="product-content-tab" id="information">Información del producto</div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+        <!-- Woman banner -->
+        <!-- <section class="banner banner--women">
+            <a class="banner__button" href="#">
+                <h2 class="banner__title">Mujeres</h2>
+            </a>
+        </section> -->
+        <!-- Man banner -->
+        <!-- <section class="banner banner--men">
+            <a class="banner__button" href="#">
+                <h2 class="banner__title">Hombres</h2>
+            </a>
+        </section> -->
+    </main>
+    <script src="js/script.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 </body>
+
 </html>

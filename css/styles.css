@@ -1,0 +1,194 @@
+.material-icons {
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: "liga";
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../src/fonts/Roboto-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../src/fonts/Roboto-Bold.ttf");
+    font-style: normal;
+    font-weight: 700;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    color: #222;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", "Roboto", sans-serif;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: "liga";
+}
+
+ul {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+a:hover, a:visited, a:active {
+    color: #222;
+}
+
+.l-container {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 320px;
+    padding: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-networks {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icon {
+    color: transparent;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-indent: -999rem;
+    outline: none;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+.icon--facebook {
+    background: transparent url("../src/svg/facebook.svg") center right no-repeat;
+}
+
+.icon--instagram {
+    background: transparent url("../src/svg/instagram.svg") center right no-repeat;
+}
+
+.icon--whatsapp {
+    background: transparent url("../src/svg/whatsapp.svg") center right no-repeat;
+}
+
+.menu-button {
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+    outline: none;
+    height: 2rem;
+    border: none;
+}
+
+.menu-button__icon {
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 22px;
+    height: 0.15rem;
+    background-color: #222;
+    border-radius: 5px;
+}
+.menu-button__icon::before, .menu-button__icon::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 0.15rem;
+    background-color: #222;
+    border-radius: 5px;
+}
+.menu-button__icon::before {
+    transform: translateY(-6px);
+}
+.menu-button__icon::after {
+    transform: translateY(6px);
+}
+
+.menu-nav {
+    display: none;
+}
+.menu-nav.open {
+    display: block;
+}
+
+.main-menu__item {
+    border-bottom: 1px solid rgba(205, 205, 212, 0.8);
+}
+
+.main-menu__item.selected .main-menu__link::before {
+    transform: rotate(45deg);
+}
+.main-menu__item.selected .main-menu__link::after {
+    transform: rotate(135deg);
+}
+
+.main-menu__link {
+    font-weight: bold;
+    color: #222;
+    display: block;
+    line-height: 1.5em;
+    padding: 0.6em 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.main-menu__link::before, .main-menu__link::after {
+    --width: 16px;
+    content: "";
+    width: var(--width);
+    height: 2px;
+    background: #222;
+    position: absolute;
+    top: 50%;
+    right: calc((22px - var(--width))/2);
+    transition: transform 0.12s ease-in-out;
+}
+.main-menu__link::after {
+    transform: rotate(90deg);
+}

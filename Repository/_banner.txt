@@ -1,0 +1,39 @@
+*, html{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "sans-serif";
+}
+.banner{
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #444;
+    text-align: center;
+    display: flex;
+} 
+.banner--women{
+    background-image: url(../../src/img/models/women/healthy-body-mujer.jpg);
+}
+.banner--men{
+    background-image: url(../../src/img/models/men/winner-hombre.jpg);
+}
+.banner__button {
+    display: inline-block;    
+    padding: .85em 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(0,0,0,.5);
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    bottom: 0;
+}
+.banner__button, .banner__button:visited, .banner__button:hover, .banner__button:active {
+    color: #222;
+}
+
+
+
+

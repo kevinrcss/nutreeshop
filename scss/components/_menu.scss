@@ -1,0 +1,86 @@
+$burger-icon-line-width: 22px;
+$burger-icon-line-height: .15rem;
+.menu-button{
+    cursor: pointer;
+    background-color: transparent;    
+    position: relative;
+    outline: none;
+    height: 2rem;
+    border: none;
+}
+.menu-button__icon
+{
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: $burger-icon-line-width;
+    height: $burger-icon-line-height;
+    background-color: $font-primary-color;
+    border-radius: 5px;
+    &::before,
+    &::after{
+        content: "";
+        position: absolute;
+        width: $burger-icon-line-width;
+        height: $burger-icon-line-height;
+        background-color: $font-primary-color;
+        border-radius: 5px;
+    }
+    &::before{
+        transform: translateY(-6px);
+    }
+    &::after{
+        transform: translateY(6px);
+    }
+}
+
+// Nav and menu items
+.menu-nav{
+    display: none;
+    &.open{
+        display: block;
+    }
+}
+.main-menu__item{
+    border-bottom: 1px solid rgba($palette-third-color, .8);
+}
+.main-menu__item.selected .main-menu__link{
+    &::before{
+        transform: rotate(45deg);
+    }
+    &::after{
+        transform: rotate(135deg);
+    }
+}
+.main-menu__link{
+    font-weight: bold;
+    color: $font-primary-color;
+    display: block ;
+    line-height: 1.5em;
+    padding: .6em 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    
+    //Icono de cruz
+    &::before,
+    &::after{
+        --width : 16px;
+        content: "";
+        width: var(--width);
+        height: 2px;
+        background: $font-primary-color;
+        position: absolute;
+        top: 50%;        
+        right: calc((#{$burger-icon-line-width} - var(--width))/2);
+        transition: transform .12s ease-in-out;
+    }
+    &::after{
+        transform: rotate(90deg);
+        
+    }
+}
+

@@ -1,0 +1,77 @@
+$burger-icon-line-width: 22px;
+$burger-icon-line-height: .15rem;
+.menu-button{
+    cursor: pointer;
+    background-color: transparent;    
+    position: relative;
+    outline: none;
+    height: 2rem;
+    border: none;
+}
+.menu-button__icon
+{
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: $burger-icon-line-width;
+    height: $burger-icon-line-height;
+    background-color: $font-primary-color;
+    border-radius: 5px;
+    &::before,
+    &::after{
+        content: "";
+        position: absolute;
+        width: $burger-icon-line-width;
+        height: $burger-icon-line-height;
+        background-color: $font-primary-color;
+        border-radius: 5px;
+    }
+    &::before{
+        transform: translateY(-6px);
+    }
+    &::after{
+        transform: translateY(6px);
+    }
+}
+
+// Nav and menu items
+.menu-nav{
+    display: none;
+    &.active{
+        display: block;
+    }
+}
+.main-menu__item{
+    border-bottom: 1px solid rgba($palette-third-color, .8);
+}
+.main-menu__link{
+    color: $font-primary-color;
+    display: block ;
+    line-height: 1.5em;
+    padding: .6em 0;
+    position: relative;
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+    
+    //Icono de cruz
+    &::before,
+    &::after{
+        --width : 16px;
+        content: "";
+        width: var(--width);
+        height: 2px;
+        background: $font-primary-color;
+        position: absolute;
+        top: 50%;
+        
+        right: calc((#{$burger-icon-line-width} - var(--width))/2);
+    }
+    &::after{
+        transform: rotate(90deg);
+    }
+}
+

@@ -1,0 +1,50 @@
+@font-face{
+    font-family: 'Roboto';
+    src: url("../src/fonts/Roboto-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face{
+    font-family: 'Roboto';
+    src: url("../src/fonts/Roboto-Bold.ttf");
+    font-style: normal;
+    font-weight: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    color: $font-primary-color;
+}
+
+body{
+    margin: 0;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;      
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;      
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+ul{
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+a{
+    text-decoration: none;
+    color: $font-primary-color;
+    &:hover , &:visited , &:active{
+        color: $font-primary-color;
+    }
+}

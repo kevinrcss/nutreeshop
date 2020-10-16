@@ -1,0 +1,30 @@
+$social-icon-size: 1.5rem;
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+}
+.social-networks{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-icon{
+    color: transparent;
+    width: $social-icon-size;
+    height: $social-icon-size;
+    text-indent: -999rem;
+    outline: none;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.icon--facebook{
+    background: transparent url("../src/svg/facebook.svg") center right no-repeat;
+}
+.icon--instagram{
+    background: transparent url("../src/svg/instagram.svg") center right no-repeat;
+}
+.icon--whatsapp{
+    background: transparent url("../src/svg/whatsapp.svg") center right no-repeat;
+}
