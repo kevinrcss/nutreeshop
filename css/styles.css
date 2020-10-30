@@ -1,37 +1,14 @@
-.material-icons {
-    font-family: "Material Icons";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-    /* Support for IE. */
-    font-feature-settings: "liga";
-}
-
 @font-face {
-    font-family: "Roboto";
-    src: url("../src/fonts/Roboto-Regular.ttf");
+    font-family: "Great Vibes", cursive;
+    src: url("../src/fonts/Great_Vibes/Playlist Script.ttf");
     font-style: normal;
     font-weight: 400;
 }
 @font-face {
-    font-family: "Roboto";
-    src: url("../src/fonts/Roboto-Bold.ttf");
+    font-family: "Playlist Script";
+    src: url("../src/fonts/Playlist_Script/PlaylistScript.woff2") format("woff2"), url("../src/fonts/Playlist_Script/PlaylistScript.woff") format("woff");
+    font-weight: normal;
     font-style: normal;
-    font-weight: 700;
 }
 * {
     margin: 0;
@@ -40,7 +17,7 @@
 }
 
 :root {
-    color: #222;
+    color: #6e6d7a;
 }
 
 body {
@@ -65,22 +42,91 @@ ul {
 
 a {
     text-decoration: none;
-    color: #222;
+    color: #6e6d7a;
 }
 a:hover, a:visited, a:active {
-    color: #222;
+    color: #6e6d7a;
 }
 
 .l-container {
     width: 100%;
     max-width: 1200px;
     min-width: 320px;
-    padding: 1.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
     margin-left: auto;
     margin-right: auto;
 }
 
-.header-content {
+.brand {
+    padding: 2rem 0 1.5rem;
+}
+
+.brand-title {
+    color: transparent;
+    line-height: 0;
+    margin: 0;
+    text-indent: -9999px;
+}
+
+.brand-logo {
+    font-weight: normal;
+    font-size: 3rem;
+    position: relative;
+    margin: 0 auto 0;
+    font-family: "Playlist Script", sans-serif;
+    font-weight: normal;
+    color: #222222;
+    text-align: center;
+    background: transparent url("../src/svg/canvas.svg") center center no-repeat;
+    background-size: 8em;
+    background-position: center 0.4em;
+}
+.brand-logo::after {
+    position: relative;
+    top: -0.08em;
+    left: 0.08em;
+    display: inline-block;
+    font-size: 2.1em;
+    content: "Osito";
+    text-indent: -9999px;
+    width: 1em;
+    color: transparent;
+    background: transparent url("../src/svg/osito.svg") center center no-repeat;
+    background-size: contain;
+    z-index: 0;
+}
+
+.brand-logo::first-letter {
+    font-size: 220%;
+}
+
+.brand-logo-memories {
+    position: absolute;
+    top: 0.4em;
+}
+
+.brand-logo-moments {
+    position: relative;
+    top: 0.3em;
+    right: 0.2em;
+}
+
+.brand-logo-and {
+    font-size: 0.65em;
+    position: relative;
+    top: 0.3em;
+    left: 0.3em;
+}
+
+/*prueba*/
+.header {
+    width: 100%;
+    background: #fff;
+    z-index: 900;
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
 }
@@ -99,7 +145,7 @@ a:hover, a:visited, a:active {
     text-indent: -999rem;
     outline: none;
     background-position: center center;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 
 .icon--facebook {
@@ -115,12 +161,22 @@ a:hover, a:visited, a:active {
 }
 
 .menu-button {
-    cursor: pointer;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
     position: relative;
     outline: none;
     height: 2rem;
     border: none;
+    cursor: pointer;
+}
+.menu-button.open .menu-button__icon {
+    display: none;
+}
+.menu-button.open .menu-button__icon-close {
+    display: block;
 }
 
 .menu-button__icon {
@@ -128,20 +184,18 @@ a:hover, a:visited, a:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 22px;
-    height: 0.15rem;
-    background-color: #222;
-    border-radius: 5px;
+    width: 18px;
+    height: 2.4px;
+    background-color: #6e6d7a;
+    border-radius: 6px;
 }
 .menu-button__icon::before, .menu-button__icon::after {
     content: "";
     position: absolute;
-    width: 22px;
-    height: 0.15rem;
-    background-color: #222;
-    border-radius: 5px;
+    width: 18px;
+    height: 2.4px;
+    background-color: #6e6d7a;
+    border-radius: 6px;
 }
 .menu-button__icon::before {
     transform: translateY(-6px);
@@ -150,45 +204,80 @@ a:hover, a:visited, a:active {
     transform: translateY(6px);
 }
 
+.menu-button__icon-close {
+    display: none;
+    color: #6e6d7a;
+    font-size: 2rem;
+    text-align: center;
+}
+
 .menu-nav {
     display: none;
+    padding-top: 1.2rem;
 }
 .menu-nav.open {
     display: block;
 }
 
-.main-menu__item {
-    border-bottom: 1px solid rgba(205, 205, 212, 0.8);
+.menu__item {
+    border-bottom: 1px solid rgba(205, 205, 212, 0.9);
 }
 
-.main-menu__item.selected .main-menu__link::before {
-    transform: rotate(45deg);
-}
-.main-menu__item.selected .main-menu__link::after {
-    transform: rotate(135deg);
+.menu__item.selected .menu__link::after {
+    transform: rotate(180deg);
 }
 
-.main-menu__link {
+.menu__link {
     font-weight: bold;
-    color: #222;
+    color: #6e6d7a;
     display: block;
-    line-height: 1.5em;
-    padding: 0.6em 0;
+    line-height: 1.8rem;
+    padding: 0.8rem 0;
     position: relative;
     display: flex;
     justify-content: space-between;
+    padding-right: 3px;
 }
-.main-menu__link::before, .main-menu__link::after {
+.menu__link::after {
     --width: 16px;
     content: "";
     width: var(--width);
-    height: 2px;
-    background: #222;
-    position: absolute;
-    top: 50%;
-    right: calc((22px - var(--width))/2);
-    transition: transform 0.12s ease-in-out;
+    background: transparent url("../src/svg/caret-down.svg") center right no-repeat;
+    transition: transform 0.15s ease-in-out;
 }
-.main-menu__link::after {
-    transform: rotate(90deg);
+
+.submenu-panel-container {
+    /*Tres: el primer valor se aplica a arriba, el segundo valor a derecha e izquierda y el tercer valor se aplica a abajo del elemento.*/
+    padding: 0.5rem 0 1.5rem;
+    display: none;
+}
+
+.submenu__item {
+    padding: 0;
+}
+
+.submenu__link {
+    color: #6e6d7a;
+    display: block;
+    line-height: 2.5em;
+    padding-left: 1rem;
+}
+
+.menu__item.selected .submenu-panel-container {
+    display: block;
+}
+
+.waves-effect.waves-color .waves-ripple {
+    background-color: rgba(0, 150, 136, 0.7);
+}
+
+.main {
+    background: #F9F8FD;
+    height: 100vh;
+    display: block;
+    padding-top: 80px;
+}
+
+body {
+    height: 100vh;
 }

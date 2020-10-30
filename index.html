@@ -2,52 +2,108 @@
 <html lang="es">
 
 <head>
-    <title>NutreeShop</title>
+    <title>Memorias&momentos</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!--Import Google Icon Font-->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">  -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/Materialize/materialize-custom.css"> 
+    <!-- <link rel="stylesheet" href="css/materialize.css">  -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="src/svg/osito.svg" sizes="any" type="image/svg+xml">
 </head>
 
 <body>
     <!-- Header -->
-    <header class="main-header">
-        <div class="l-container header-content">
-            <div class="social-networks">
-                <a href="#" class="social-icon icon--facebook">Síguenos en Facebook</a>
-                <a href="#" class="social-icon icon--instagram">Encuéntranos en Facebook</a>
-                <a href="#" class="social-icon icon--whatsapp">Contáctanos en whatsapp</a>
+    <header class="header">
+        <div class="l-container brand">
+            <h1 class="brand-title">Memorias y Momentos</h1>        
+            <h2 class="brand-logo">
+                <span class="brand-logo-m">M</span>
+                <span class="brand-logo-memories">emorias<span class="brand-logo-and">y</span></span>
+                <span class="brand-logo-moments">omentos</span>
+            </h2>
+        </div>
+        <div class="l-container">
+            <div class="header-container">
+                <div class="social-networks">
+                    <a href="#" class="social-icon icon--facebook">Encuéntranos en Facebook</a>
+                    <a href="#" class="social-icon icon--instagram">Síguenos en Instagram</a>
+                    <a href="#" class="social-icon icon--whatsapp">Contáctanos en Whatsapp</a>
+                </div>
+                <a href="#" id="menu-button" class="menu-button">
+                    <span id="menu-icon" class="menu-button__icon">menu</span>
+                    <span id="menu-icon" class="menu-button__icon-close">×</span>
+                </a>
             </div>
-            <button id="menu-button" class="menu-button">
-                <span id="menu-icon" class="menu-button__icon">menu</span>            
-            </button>
-
+            <nav id="menu-nav" class="menu-nav">
+                <ul id="menu" class="menu">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link" aria-expanded="false">Para ella</a>
+                        <div class="submenu-panel-container">
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__link waves-effect waves-color">Peluches</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__link waves-effect waves-color">Cajitas Sorpresas</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__link waves-effect waves-color">Packs</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__link waves-effect waves-color">Tarjetas personalizadas</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link" aria-expanded="false">Para él</a>
+                        <div class="submenu-panel-container">
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__link waves-effect waves-color">Peluches</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__link waves-effect waves-color">Cajitas Sorpresas</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__link waves-effect waves-color">Packs</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__link waves-effect waves-color">Tarjetas personalizadas</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <nav id="menu-nav" class="menu-nav">
-        <div class="l-container">   
-            <ul id="main-menu" class="main-menu">
-                <li class="main-menu__item">
-                    <a href="#" class="main-menu__link">Hombres</a>
-                    <div>
-                        <ul>
-                            <li>hello world</li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="main-menu__item">
-                    <a href="#" class="main-menu__link">Mujeres</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    
-    <main>
-        <div class="product">
+    <!-- Menu -->
+
+
+    <main class="main">
+        <!-- <h3 class="custom-brand">
+            <span class="first-letter letter">M</span>  
+            <span class="letter">emorias</span><br>  
+            <span class="letter">omentos</span>  
+        </h3> -->
+
+        <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint sit quo consectetur totam ullam
+            perferendis recusandae, asperiores reiciendis nulla ratione cumque eius iusto autem expedita similique illum,
+            exercitationem cum provident.</p>
+
+            <!-- <img  class="osito" src="src/svg/osito.svg" alt=""> -->
+        
+            
+        <!-- <div class="product">
             <h2 class="product-slogan">
                 <span class="product-slogan__capital-letter">F</span>ortalece tus
                 <span class="product-slogan__capital-letter">M</span>úsculos
@@ -65,10 +121,10 @@
                     <div class="product-content-tab" id="information">Información del producto</div>
                 </div>
             </div>
-        </div>
-    
-    
-    
+        </div> -->
+
+
+
         <!-- Woman banner -->
         <!-- <section class="banner banner--women">
             <a class="banner__button" href="#">
@@ -85,6 +141,7 @@
     <script src="js/script.js"></script>
     <!-- Compiled and minified JavaScript -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <script src="js/materialize.min.js"></script>
 </body>
 
 </html>

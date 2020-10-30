@@ -1,0 +1,80 @@
+.brand{
+    // border: 1px dashed lightblue;
+    padding: 2rem 0 1.5rem;
+}
+
+.brand-title{
+    color:transparent;
+    line-height: 0;
+    margin: 0;
+    text-indent: -9999px;
+}
+
+.brand-logo{
+    font-weight: normal;
+    font-size: 2.8rem;
+    position: relative;
+    margin: 0 auto 0;
+    // font-family: 'Great Vibes', cursive;
+    font-family: "Playlist Script", sans-serif;
+    font-weight: normal;
+    color: rgba($font-dark-color, 1);
+    text-align: center;
+    background: transparent url("../src/svg/canvas.svg") center center no-repeat;
+    // border: 1px dashed lightcoral;
+    background-size: 7em;
+    background-position: center .2em;
+    &::after{
+        position: relative;
+        top: -0.16em;
+        left: 0.08em;
+        display: inline-block;
+        font-size: 2em;
+        // border: 1px dashed lightgreen;
+        content: "Osito";
+        text-indent: -9999px;
+        width: 1em;
+        color: transparent;
+        background: transparent url("../src/svg/osito.svg") center center no-repeat;
+        background-size: contain; 
+        z-index: 0;       
+    } 
+}
+
+.brand-logo::first-letter{
+    font-size: 200%;
+    // background-color: aqua; 
+}
+
+.brand-logo-memories{
+    position: absolute;
+    padding-left: .18em;
+}
+
+.brand-logo-and{
+    position: absolute;
+    font-size: .65em;
+    top: .8em;
+}
+
+/*prueba*/
+.custom-brand{
+    font-family: "Playlist Script", sans-serif;
+    font-weight: normal;
+    font-size: 3rem;
+    border: 1px dashed lightblue;
+    overflow: hidden;
+}
+.letter{
+    float: left;
+    outline: 1px solid lightblue;
+}
+.letter:first-child{
+    font-size: 200%;
+}
+.letter:last-child{
+    padding: 0 0 0 0;
+    margin: 0px 0 0;
+    
+}
+

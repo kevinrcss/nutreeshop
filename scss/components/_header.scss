@@ -1,6 +1,11 @@
 $social-icon-size: 1.5rem;
-
-.header-content{
+.header{
+    // position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 900;
+}
+.header-container{
     display: flex;
     justify-content: space-between;
 }
@@ -17,7 +22,7 @@ $social-icon-size: 1.5rem;
     text-indent: -999rem;
     outline: none;
     background-position: center center;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 .icon--facebook{
     background: transparent url("../src/svg/facebook.svg") center right no-repeat;
@@ -28,3 +33,4 @@ $social-icon-size: 1.5rem;
 .icon--whatsapp{
     background: transparent url("../src/svg/whatsapp.svg") center right no-repeat;
 }
+

@@ -1,33 +1,44 @@
-$burger-icon-line-width: 22px;
-$burger-icon-line-height: .15rem;
+$burger-icon-line-width: 18px;
+$burger-icon-line-height: 2.4px;
+
+// Button & buger icon
 .menu-button{
-    cursor: pointer;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;    
     position: relative;
     outline: none;
     height: 2rem;
     border: none;
+    cursor: pointer;
+    &.open .menu-button__icon{
+        display: none;
+    }
+    &.open .menu-button__icon-close{
+        display: block;
+    }
 }
+
 .menu-button__icon
 {
     color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
     width: $burger-icon-line-width;
     height: $burger-icon-line-height;
-    background-color: $font-primary-color;
-    border-radius: 5px;
+    background-color: $palette-primary-color;
+    border-radius: 6px;
     &::before,
     &::after{
         content: "";
         position: absolute;
         width: $burger-icon-line-width;
         height: $burger-icon-line-height;
-        background-color: $font-primary-color;
-        border-radius: 5px;
+        background-color: $palette-primary-color;
+        border-radius: 6px;
     }
     &::before{
         transform: translateY(-6px);
@@ -35,52 +46,79 @@ $burger-icon-line-height: .15rem;
     &::after{
         transform: translateY(6px);
     }
+
 }
 
-// Nav and menu items
+.menu-button__icon-close{
+    display: none;
+    color: $palette-primary-color;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+// Nav bar & menu items
 .menu-nav{
     display: none;
+    padding-top: 1.2rem;
     &.open{
         display: block;
     }
 }
-.main-menu__item{
-    border-bottom: 1px solid rgba($palette-third-color, .8);
+.menu__item{
+    border-bottom: 1px solid rgba($palette-second-color, .9);
 }
-.main-menu__item.selected .main-menu__link{
-    &::before{
-        transform: rotate(45deg);
-    }
+.menu__item.selected .menu__link{
     &::after{
-        transform: rotate(135deg);
+        transform: rotate(180deg);
     }
 }
-.main-menu__link{
+.menu__link{
     font-weight: bold;
     color: $font-primary-color;
     display: block ;
-    line-height: 1.5em;
-    padding: .6em 0;
+    line-height: 1.8rem;
+    padding: .8rem 0;
     position: relative;
     display: flex;
     justify-content: space-between;
-    
-    //Icono de cruz
-    &::before,
+    padding-right: 3px;
     &::after{
         --width : 16px;
         content: "";
         width: var(--width);
-        height: 2px;
-        background: $font-primary-color;
-        position: absolute;
-        top: 50%;        
-        right: calc((#{$burger-icon-line-width} - var(--width))/2);
-        transition: transform .12s ease-in-out;
+        background: transparent url("../src/svg/caret-down.svg") center right no-repeat;
+        transition: transform .15s ease-in-out;
+
     }
-    &::after{
-        transform: rotate(90deg);
-        
-    }
+}
+
+// Submenu
+
+.submenu-panel-container{
+    // background-color: rgba($palette-third-color,.3);
+    /*Tres: el primer valor se aplica a arriba, el segundo valor a derecha e izquierda y el tercer valor se aplica a abajo del elemento.*/
+    // padding: .5rem 1rem 1.5rem; 
+    padding: .5rem 0 1.5rem; 
+    display: none;
+}
+
+.submenu__item{
+    // border: 1px dashed lightblue;   
+    padding: 0;    
+}
+
+.submenu__link{
+    color: $palette-primary-color;
+    display: block;
+    line-height: 2.5em;
+    padding-left: 1rem;
+}
+.menu__item.selected  .submenu-panel-container{
+    display: block;
+}
+
+.waves-effect.waves-color .waves-ripple {
+    background-color: rgba(0, 150, 136, 0.7);
 }
 

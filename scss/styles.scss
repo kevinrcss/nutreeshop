@@ -2,16 +2,28 @@
 $max-width: 1200px;
 $min-width : 320px;
 
-// Paleta de colores
-$palette-primary-color: #1b1b1b; 
-$palette-second-color: #1b1b1b;
-$palette-third-color: #cdcdd4;
-// Color de fuente
-$font-primary-color: #222;
+$header-height: 80px;
 
-@import "materialize/material-icons"; 
+// Paleta de colores
+$palette-primary-color: #6e6d7a; 
+$palette-second-color:  #cdcdd4;
+$palette-third-color: #edeef0;
+$background-light: #F9F8FD; //dribble
+
+// Color de fuente
+$font-primary-color: #6e6d7a;
+$font-dark-color: #222;
+
+// @import "materialize/material-icons"; 
+
 @import "base/_base";
 @import "layout/layout";
 
+@import "components/_logo";
 @import "components/_header";
 @import "components/_menu";
+@import "components/main";
+
+body{
+    height: 100vh;
+}

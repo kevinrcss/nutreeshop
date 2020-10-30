@@ -1,0 +1,6 @@
+<p>&copy</p> 
+<p>&gt</p> 
+<p>&lt</p> 
+<p>&nsbp</p>
+<p>&euro</p>  
+<p>&reg</p> 
