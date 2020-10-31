@@ -1,72 +1,25 @@
-$burger-icon-line-width: 18px;
-$burger-icon-line-height: 2.4px;
-
 // Button & buger icon
 .menu-button{
-    width: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;    
-    position: relative;
-    outline: none;
-    height: 2rem;
+    background: transparent url("../src/svg/menu.svg") center center no-repeat;
     border: none;
-    cursor: pointer;
-    &.open .menu-button__icon{
-        display: none;
-    }
-    &.open .menu-button__icon-close{
-        display: block;
-    }
+    outline: none;
+    width: 2rem;
+    height: 2rem;
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
 }
-
-.menu-button__icon
-{
-    color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: $burger-icon-line-width;
-    height: $burger-icon-line-height;
-    background-color: $palette-primary-color;
-    border-radius: 6px;
-    &::before,
-    &::after{
-        content: "";
-        position: absolute;
-        width: $burger-icon-line-width;
-        height: $burger-icon-line-height;
-        background-color: $palette-primary-color;
-        border-radius: 6px;
-    }
-    &::before{
-        transform: translateY(-6px);
-    }
-    &::after{
-        transform: translateY(6px);
-    }
-
-}
-
-.menu-button__icon-close{
-    display: none;
-    color: $palette-primary-color;
-    font-size: 2rem;
-    text-align: center;
-}
-
 
 // Nav bar & menu items
-.menu-nav{
+.menu{
     display: none;
-    padding-top: 1.2rem;
-    &.open{
-        display: block;
-    }
+}
+.menu.open{
+    display: block;
 }
 .menu__item{
     border-bottom: 1px solid rgba($palette-second-color, .9);
+}
+.menu__item:last-child{
+    border: none;
 }
 .menu__item.selected .menu__link{
     &::after{
@@ -82,29 +35,27 @@ $burger-icon-line-height: 2.4px;
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding-right: 3px;
     &::after{
         --width : 16px;
         content: "";
         width: var(--width);
-        background: transparent url("../src/svg/caret-down.svg") center right no-repeat;
+        background: transparent url("../src/svg/caret-down.svg") center center no-repeat;
+        background-size: contain;
         transition: transform .15s ease-in-out;
-
+        margin-right: .5rem ;
     }
 }
 
 // Submenu
-
 .submenu-panel-container{
     // background-color: rgba($palette-third-color,.3);
     /*Tres: el primer valor se aplica a arriba, el segundo valor a derecha e izquierda y el tercer valor se aplica a abajo del elemento.*/
     // padding: .5rem 1rem 1.5rem; 
-    padding: .5rem 0 1.5rem; 
+    padding-bottom: 1.5rem; 
     display: none;
 }
 
 .submenu__item{
-    // border: 1px dashed lightblue;   
     padding: 0;    
 }
 

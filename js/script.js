@@ -1,12 +1,12 @@
 (function (d) {
     const menuButton = d.getElementById('menu-button'),
-            menuNav = d.getElementById('menu-nav');
+            menu = d.getElementById('menu');
 
-    if(menuButton && menuNav){
+    if(menuButton && menu){
         menuButton.addEventListener('click', (e)=>{
             e.preventDefault();
             menuButton.classList.toggle('open')
-            menuNav.classList.toggle('open');
+            menu.classList.toggle('open');
         })
     }
 })(document);
@@ -20,7 +20,32 @@
             if (element.classList.contains('menu__link')){
                 e.target.parentNode.classList.toggle("selected");
             }
-            // console.log(e.target.getAttribute('aria-expanded'))
         });
     }
 })(document);
+
+window.onload = function() {
+    fixedMenu();
+};
+
+
+function fixedMenu(){
+    const navigationBar = document.getElementById("navigation-bar");
+    const brand = document.getElementById("brand");
+    if (navigationBar) {
+        window.addEventListener("scroll", (e) => {
+        if (window.pageYOffset > navigationBar.offsetTop) {
+            navigationBar.classList.add("fixed");
+            brand.classList.add("fixed");
+        }
+        else {
+            navigationBar.classList.remove("fixed");
+            brand.classList.remove("fixed");
+        }
+    });
+    }
+};
+
+
+
+

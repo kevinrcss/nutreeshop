@@ -22,6 +22,8 @@
 
 body {
     margin: 0;
+    padding: 0;
+    height: 100vh;
     font-family: "Poppins", "Roboto", sans-serif;
     /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;
@@ -41,6 +43,7 @@ ul {
 }
 
 a {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     text-decoration: none;
     color: #6e6d7a;
 }
@@ -59,7 +62,11 @@ a:hover, a:visited, a:active {
 }
 
 .brand {
-    padding: 2rem 0 1.5rem;
+    padding: 3rem 0 2.5rem;
+}
+
+.brand.fixed {
+    display: none;
 }
 
 .brand-title {
@@ -71,7 +78,7 @@ a:hover, a:visited, a:active {
 
 .brand-logo {
     font-weight: normal;
-    font-size: 3rem;
+    font-size: 2.6rem;
     position: relative;
     margin: 0 auto 0;
     font-family: "Playlist Script", sans-serif;
@@ -79,7 +86,7 @@ a:hover, a:visited, a:active {
     color: #222222;
     text-align: center;
     background: transparent url("../src/svg/canvas.svg") center center no-repeat;
-    background-size: 8em;
+    background-size: 7.2em;
     background-position: center 0.4em;
 }
 .brand-logo::after {
@@ -119,14 +126,21 @@ a:hover, a:visited, a:active {
     left: 0.3em;
 }
 
-/*prueba*/
-.header {
-    width: 100%;
+.navigation-bar {
     background: #fff;
-    z-index: 900;
+    padding-bottom: 1.5rem;
+    transition: all 0.3s;
 }
 
-.header-container {
+.navigation-bar.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    padding-top: 1.5rem;
+}
+
+.navigation-options {
     display: flex;
     justify-content: space-between;
 }
@@ -147,6 +161,9 @@ a:hover, a:visited, a:active {
     background-position: center center;
     background-size: cover;
 }
+.social-icon:hover {
+    color: transparent;
+}
 
 .icon--facebook {
     background: transparent url("../src/svg/facebook.svg") center right no-repeat;
@@ -161,66 +178,28 @@ a:hover, a:visited, a:active {
 }
 
 .menu-button {
-    width: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    position: relative;
-    outline: none;
-    height: 2rem;
+    background: transparent url("../src/svg/menu.svg") center center no-repeat;
     border: none;
-    cursor: pointer;
-}
-.menu-button.open .menu-button__icon {
-    display: none;
-}
-.menu-button.open .menu-button__icon-close {
-    display: block;
+    outline: none;
+    width: 2rem;
+    height: 2rem;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
-.menu-button__icon {
-    color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 2.4px;
-    background-color: #6e6d7a;
-    border-radius: 6px;
-}
-.menu-button__icon::before, .menu-button__icon::after {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 2.4px;
-    background-color: #6e6d7a;
-    border-radius: 6px;
-}
-.menu-button__icon::before {
-    transform: translateY(-6px);
-}
-.menu-button__icon::after {
-    transform: translateY(6px);
+.menu {
+    display: none;
 }
 
-.menu-button__icon-close {
-    display: none;
-    color: #6e6d7a;
-    font-size: 2rem;
-    text-align: center;
-}
-
-.menu-nav {
-    display: none;
-    padding-top: 1.2rem;
-}
-.menu-nav.open {
+.menu.open {
     display: block;
 }
 
 .menu__item {
     border-bottom: 1px solid rgba(205, 205, 212, 0.9);
+}
+
+.menu__item:last-child {
+    border: none;
 }
 
 .menu__item.selected .menu__link::after {
@@ -236,19 +215,20 @@ a:hover, a:visited, a:active {
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding-right: 3px;
 }
 .menu__link::after {
     --width: 16px;
     content: "";
     width: var(--width);
-    background: transparent url("../src/svg/caret-down.svg") center right no-repeat;
+    background: transparent url("../src/svg/caret-down.svg") center center no-repeat;
+    background-size: contain;
     transition: transform 0.15s ease-in-out;
+    margin-right: 0.5rem;
 }
 
 .submenu-panel-container {
     /*Tres: el primer valor se aplica a arriba, el segundo valor a derecha e izquierda y el tercer valor se aplica a abajo del elemento.*/
-    padding: 0.5rem 0 1.5rem;
+    padding-bottom: 1.5rem;
     display: none;
 }
 
@@ -273,11 +253,6 @@ a:hover, a:visited, a:active {
 
 .main {
     background: #F9F8FD;
-    height: 100vh;
+    height: 100rem;
     display: block;
-    padding-top: 80px;
-}
-
-body {
-    height: 100vh;
 }

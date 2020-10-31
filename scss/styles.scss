@@ -20,10 +20,7 @@ $font-dark-color: #222;
 @import "layout/layout";
 
 @import "components/_logo";
-@import "components/_header";
+@import "components/_navigation-bar";
 @import "components/_menu";
 @import "components/main";
 
-body{
-    height: 100vh;
-}

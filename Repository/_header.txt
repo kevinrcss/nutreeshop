@@ -1,13 +1,10 @@
 $social-icon-size: 1.5rem;
-.header{
-    // position: fixed;
-    width: 100%;
-    background: #fff;
-    z-index: 900;
-}
-.header-container{
+
+
+.navigation-container{
     display: flex;
     justify-content: space-between;
+    padding: 1.5rem 0;
 }
 .social-networks{
     width: 50%;
@@ -16,6 +13,7 @@ $social-icon-size: 1.5rem;
     align-items: center;
 }
 .social-icon{
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
     color: transparent;
     width: $social-icon-size;
     height: $social-icon-size;
@@ -23,6 +21,9 @@ $social-icon-size: 1.5rem;
     outline: none;
     background-position: center center;
     background-size: cover;
+    &:hover{
+        color: transparent;
+    }
 }
 .icon--facebook{
     background: transparent url("../src/svg/facebook.svg") center right no-repeat;
@@ -34,3 +35,8 @@ $social-icon-size: 1.5rem;
     background: transparent url("../src/svg/whatsapp.svg") center right no-repeat;
 }
 
+// .icon{
+//     fill: red;
+//     width: 1.5rem;
+//     height: 1.5rem;
+// }

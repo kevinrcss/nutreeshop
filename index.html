@@ -12,7 +12,7 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">  -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/Materialize/materialize-custom.css"> 
+    <link rel="stylesheet" href="css/Materialize/materialize-custom.css">
     <!-- <link rel="stylesheet" href="css/materialize.css">  -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -20,123 +20,76 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="l-container brand">
-            <h1 class="brand-title">Memorias y Momentos</h1>        
+    <header id="brand" class="brand">
+        <div class="l-container">
+            <h1 class="brand-title">Memorias y Momentos</h1>
             <h2 class="brand-logo">
                 <span class="brand-logo-m">M</span>
                 <span class="brand-logo-memories">emorias<span class="brand-logo-and">y</span></span>
                 <span class="brand-logo-moments">omentos</span>
             </h2>
         </div>
-        <div class="l-container">
-            <div class="header-container">
-                <div class="social-networks">
-                    <a href="#" class="social-icon icon--facebook">Encuéntranos en Facebook</a>
-                    <a href="#" class="social-icon icon--instagram">Síguenos en Instagram</a>
-                    <a href="#" class="social-icon icon--whatsapp">Contáctanos en Whatsapp</a>
-                </div>
-                <a href="#" id="menu-button" class="menu-button">
-                    <span id="menu-icon" class="menu-button__icon">menu</span>
-                    <span id="menu-icon" class="menu-button__icon-close">×</span>
-                </a>
-            </div>
-            <nav id="menu-nav" class="menu-nav">
-                <ul id="menu" class="menu">
-                    <li class="menu__item">
-                        <a href="#" class="menu__link" aria-expanded="false">Para ella</a>
-                        <div class="submenu-panel-container">
-                            <ul class="submenu">
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link waves-effect waves-color">Peluches</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link waves-effect waves-color">Cajitas Sorpresas</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link waves-effect waves-color">Packs</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link waves-effect waves-color">Tarjetas personalizadas</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link" aria-expanded="false">Para él</a>
-                        <div class="submenu-panel-container">
-                            <ul class="submenu">
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link waves-effect waves-color">Peluches</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link waves-effect waves-color">Cajitas Sorpresas</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link waves-effect waves-color">Packs</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link waves-effect waves-color">Tarjetas personalizadas</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
     </header>
-    <!-- Menu -->
-
-
-    <main class="main">
-        <!-- <h3 class="custom-brand">
-            <span class="first-letter letter">M</span>  
-            <span class="letter">emorias</span><br>  
-            <span class="letter">omentos</span>  
-        </h3> -->
-
-        <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint sit quo consectetur totam ullam
-            perferendis recusandae, asperiores reiciendis nulla ratione cumque eius iusto autem expedita similique illum,
-            exercitationem cum provident.</p>
-
-            <!-- <img  class="osito" src="src/svg/osito.svg" alt=""> -->
-        
-            
-        <!-- <div class="product">
-            <h2 class="product-slogan">
-                <span class="product-slogan__capital-letter">F</span>ortalece tus
-                <span class="product-slogan__capital-letter">M</span>úsculos
-            </h2>
-            <img class="" src="" alt="">
-            <div class="product-information">
-                <ul class="product-tabs">
-                    <li class="product-tab__item"><a href="#summary" class="active">Queen Protein</a></li>
-                    <li class="product-tab__item"><a href="#price">Presentaciones</a></li>
-                    <li class="product-tab__item"><a href="#information">Información</a></li>
-                </ul>
-                <div class="product-container-tabs">
-                    <div class="product-content-tab" id="summary">Queen Protein</div>
-                    <div class="product-content-tab" id="price">Tabla de Presentaciones, Sabores y Precios</div>
-                    <div class="product-content-tab" id="information">Información del producto</div>
-                </div>
+    <nav id="navigation-bar" class="navigation-bar ">
+        <div class="navigation-options l-container">
+            <div class="social-networks">
+                <a href="#" class="social-icon icon--facebook">Encuéntranos en Facebook</a>
+                <a href="#" class="social-icon icon--instagram">Síguenos en Instagram</a>
+                <a href="#" class="social-icon icon--whatsapp">Contáctanos en Whatsapp</a>
             </div>
-        </div> -->
+            <a href="#" id="menu-button" class="menu-button"></a>
+        </div>
+        <ul id="menu" class="menu l-container">
+            <li class="menu__item">
+                <a href="#" class="menu__link">Amor</a>
+                <div class="submenu-panel-container">
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link waves-effect waves-color">Para él</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link waves-effect waves-color">Para ella</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Cumpleaños</a>
+                <div class="submenu-panel-container">
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link waves-effect waves-color">Para él</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link waves-effect waves-color">Para ella</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Infantiles</a>
+                <div class="submenu-panel-container">
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link waves-effect waves-color">Niño</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link waves-effect waves-color">Niña</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Promociones</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Otros</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="main">
 
-
-
-        <!-- Woman banner -->
-        <!-- <section class="banner banner--women">
-            <a class="banner__button" href="#">
-                <h2 class="banner__title">Mujeres</h2>
-            </a>
-        </section> -->
-        <!-- Man banner -->
-        <!-- <section class="banner banner--men">
-            <a class="banner__button" href="#">
-                <h2 class="banner__title">Hombres</h2>
-            </a>
-        </section> -->
+        
     </main>
     <script src="js/script.js"></script>
     <!-- Compiled and minified JavaScript -->
