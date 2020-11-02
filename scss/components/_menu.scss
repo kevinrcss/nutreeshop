@@ -13,7 +13,10 @@
     display: none;
 }
 .menu.open{
+    padding-top: 1.5rem;
+    // padding-bottom: 1.5rem;
     display: block;
+    // box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.18);  
 }
 .menu__item{
     border-bottom: 1px solid rgba($palette-second-color, .9);
