@@ -63,10 +63,11 @@ a:hover, a:visited, a:active {
 
 .brand {
     padding: 3rem 0 2.5rem;
+    transition: all 0.3s;
 }
 
-.brand.fixed {
-    display: none;
+.brand.hide {
+    opacity: 0;
 }
 
 .brand-title {
@@ -130,14 +131,14 @@ a:hover, a:visited, a:active {
     background: #fff;
     padding-bottom: 1.5rem;
     transition: all 0.3s;
+    position: relative;
 }
 
 .navigation-bar.fixed {
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.18);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 1px -2px rgba(0, 0, 0, 0.04);
     padding-top: 1.75rem;
     padding-bottom: 1.5rem;
 }
@@ -197,15 +198,26 @@ a:hover, a:visited, a:active {
     display: block;
 }
 
-.menu__item {
-    border-bottom: 1px solid rgba(205, 205, 212, 0.9);
+.menu__item,
+.menu__item--expansible {
+    border-bottom: 1px solid #f2f2f2;
 }
 
 .menu__item:last-child {
     border: none;
 }
 
-.menu__item.selected .menu__link::after {
+.menu__item--expansible .menu__link::after {
+    --width: 16px;
+    content: "";
+    width: var(--width);
+    background: transparent url("../src/svg/caret-down.svg") center center no-repeat;
+    background-size: contain;
+    transition: transform 0.15s ease-in-out;
+    margin-right: 0.5rem;
+}
+
+.menu__item--expansible.expanded .menu__link::after {
     transform: rotate(180deg);
 }
 
@@ -219,15 +231,6 @@ a:hover, a:visited, a:active {
     display: flex;
     justify-content: space-between;
 }
-.menu__link::after {
-    --width: 16px;
-    content: "";
-    width: var(--width);
-    background: transparent url("../src/svg/caret-down.svg") center center no-repeat;
-    background-size: contain;
-    transition: transform 0.15s ease-in-out;
-    margin-right: 0.5rem;
-}
 
 .submenu-panel-container {
     /*Tres: el primer valor se aplica a arriba, el segundo valor a derecha e izquierda y el tercer valor se aplica a abajo del elemento.*/
@@ -237,6 +240,7 @@ a:hover, a:visited, a:active {
 
 .submenu__item {
     padding: 0;
+    width: 100%;
 }
 
 .submenu__link {
@@ -246,7 +250,7 @@ a:hover, a:visited, a:active {
     padding-left: 1rem;
 }
 
-.menu__item.selected .submenu-panel-container {
+.menu__item--expansible.expanded .submenu-panel-container {
     display: block;
 }
 

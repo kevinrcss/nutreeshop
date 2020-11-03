@@ -1,9 +1,12 @@
 .brand{
     padding: 3rem 0 2.5rem;
+    transition: all .3s;  
 }
-.brand.fixed{
-    display: none;
+
+.brand.hide{
+    opacity: 0;
 }
+
 .brand-title{
     color:transparent;
     line-height: 0;
@@ -21,7 +24,6 @@
     color: rgba($font-dark-color, 1);
     text-align: center;
     background: transparent url("../src/svg/canvas.svg") center center no-repeat;
-    // border: 1px dashed lightcoral;
     background-size: 7.2em;
     background-position: center .4em;
     &::after{
@@ -30,7 +32,6 @@
         left: 0.08em;
         display: inline-block;
         font-size: 2.1em;
-        // border: 1px dashed lightgreen;
         content: "Osito";
         text-indent: -9999px;
         width: 1em;
@@ -43,24 +44,19 @@
 
 .brand-logo::first-letter{
     font-size: 220%;
-    // background: rgba(lightblue,.25);
 }
 
 .brand-logo-memories{
-    // outline: 1px solid lightblue;
     position: absolute;
     top: .4em;
 }
 .brand-logo-moments{
-    // color: lightcoral;
-    // outline: 1px solid lightgreen;
     position: relative;
     top: .3em;
     right: .2em;
 }
 
 .brand-logo-and{
-    // outline: 1px solid lightslategray;
     font-size: .65em;
     position: relative;
     top: .3em;

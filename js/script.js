@@ -18,7 +18,7 @@
             e.preventDefault();
             let element = e.target;
             if (element.classList.contains('menu__link')){
-                e.target.parentNode.classList.toggle("selected");
+                e.target.parentNode.classList.toggle("expanded");
             }
         });
     }
@@ -34,13 +34,13 @@ function fixedMenu(){
     const brand = document.getElementById("brand");
     if (navigationBar) {
         window.addEventListener("scroll", (e) => {
-        if (window.pageYOffset > navigationBar.offsetTop) {
+        if (document.documentElement.scrollTop > navigationBar.offsetTop) {
             navigationBar.classList.add("fixed");
-            brand.classList.add("fixed");
+            brand.classList.add("hide");
         }
-        else {
+        else{
             navigationBar.classList.remove("fixed");
-            brand.classList.remove("fixed");
+            brand.classList.remove("hide");
         }
     });
     }
